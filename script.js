@@ -68,17 +68,20 @@ const collatzConjecture = (num) => {
     if (maxResultArray[j][2] > highestPeak) {
       highestPeak = maxResultArray[j][2];
       integerPeak = maxResultArray[j][0];
+      // console.log(`number: ${integerPeak} has ${highestPeak} peak`);
     }
     if (maxResultArray[j][1] > finalSteps) {
       finalSteps = maxResultArray[j][1];
       integerSteps = maxResultArray[j][0];
+      // console.log(`number: ${integerSteps} took ${finalSteps} steps`);
     }
   }
   return `Running the Collatz procedure on all numbers from 1 to ${num}:\n
 The integer with most steps was ${integerSteps}, with ${finalSteps} total steps\n
-The integer with the highest peak was ${integerPeak}, with a peak of (${highestPeak}`;
+The integer with the highest peak was ${integerPeak}, with a peak of ${highestPeak}`;
 };
 // collatzConjecture(3);
-console.log(collatzConjecture(2000));
+console.log(collatzConjecture(1000));
 // console.log(resultArray);
 // console.log(maxResultArray);
+// console.log(maxResultArray.length);
